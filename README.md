@@ -12,7 +12,7 @@ NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `
 ## Functions 
 
   * `getProcessTree(pid)` to get process tree information
-  * `getpids(pid)` to get process ids in an array
+  * `getPids(pid)` to get process ids in an array
   * `show(pid)` to see process trees in text format
   * `treeKill(pid)` to kill all processes in the process tree
 
