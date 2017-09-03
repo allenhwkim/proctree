@@ -68,4 +68,5 @@ let PsTree = {
 if (require.main === module) {
   mainPid ? PsTree.show(mainPid) : console.error('invalid process id') && process.exit(1);
 }
+
 module.exports = PsTree;
