@@ -63,5 +63,5 @@ NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `
      [ [ '32034' ], [ '32038' ], [ '32039' ], [ '32040' ], [ '32045', '32048', '32050' ] ]
 
    > proctree.treeKill(32034)
-     'killed 47673 47671 47668 47664 47663 47662 47658'
+     'killed 32050 32048 32045 32040 32039 32038 32034'
 ```
