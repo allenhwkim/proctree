@@ -7,6 +7,8 @@ Retrieve or display given a process tree
 
     `npm install -g proctree`
 
+NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `pgrep`, `ps`, and `kill`
+
 ## Functions 
 
   * `getProcessTree(pid)` to get process tree information
