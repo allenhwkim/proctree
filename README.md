@@ -1,7 +1,7 @@
 proctree
 =========
 
-Retrieve or display given a process tree
+Get, display, or kill a processe tree
 
 ## Install
 
