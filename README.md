@@ -12,13 +12,13 @@ NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `
 ## Functions 
 
   * `getProcessTree(pid)` to get process tree information
-  * `getpids(pid)` to get process ids only in an array format
-  * `show(pid)` to see process trees in a text format
+  * `getpids(pid)` to get process ids in an array
+  * `show(pid)` to see process trees in text format
   * `treeKill(pid)` to kill all processes in the process tree
 
 ## Usage With Bash Shell: 
     
-    $ pstree 89982
+    $ proctree 89982
       * 32034 node index.js
         * 32038 node node_modules/.bin/chromedriver --port=60397
           * 32039 /Users/allen.kim/github/webtest/node_modules/chromedriver/lib/chromedriver/ch ...
@@ -29,16 +29,16 @@ NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `
   
 ## Usage With NodeJs Program
     ```
-    var PsTree = require('proctree');
+    var proctree = require('proctree');
       
-    PsTree.getProcessTree(pid); // to get process tree object
-    PsTree.getPidse(pid);       // to get list of process ids
-    PsTree.show(pid);           // to display process tree
+    proctree.getProcessTree(pid); // to get process tree object
+    proctree.getPidse(pid);       // to get list of process ids
+    proctree.show(pid);           // to display process tree
     ```
 
 ## NodeJS Example: 
 ```
-   > PsTree.getProcessTree(32034)
+   > proctree.getProcessTree(32034)
    Process {
      pid: '32034',
      name: 'node index.js',
@@ -50,7 +50,7 @@ NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `
           level: 1,
           children: [Object] } ] }
 
-   > PsTree.show(32034)
+   > proctree.show(32034)
     * 32034 node index.js
       * 32038 node node_modules/.bin/chromedriver --port=60397
         * 32039 /Users/allen.kim/github/webtest/node_modules/chromedriver/lib/chromedriver/ch ...
@@ -59,9 +59,9 @@ NOTE: this works on Mac/Linux/Unix environment which has default Unix commands `
             * 32048 /Applications/Google Chrome.app/Contents/Versions/60.0.3112.113/Google Chrome ...
             * 32050 /Applications/Google Chrome.app/Contents/Versions/60.0.3112.113/Google Chrome ...
 
-   > PsTree.getPids(32034)
+   > proctree.getPids(32034)
      [ [ '32034' ], [ '32038' ], [ '32039' ], [ '32040' ], [ '32045', '32048', '32050' ] ]
 
-   > PsTree.treeKill(32034)
+   > proctree.treeKill(32034)
      'killed 47673 47671 47668 47664 47663 47662 47658'
 ```
