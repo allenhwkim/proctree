@@ -7,6 +7,13 @@ Retrieve or display given a process tree
 
     `npm install -g proctree`
 
+## Functions 
+
+  * `getProcessTree(pid)` to get process tree information
+  * `getpids(pid)` to get process ids only in an array format
+  * `show(pid)` to see process trees in a text format
+  * `treeKill(pid)` to kill all processes in the process tree
+
 ## Usage With Bash Shell: 
     
     $ pstree 89982
@@ -52,4 +59,7 @@ Retrieve or display given a process tree
 
    > PsTree.getPids(32034)
      [ [ '32034' ], [ '32038' ], [ '32039' ], [ '32040' ], [ '32045', '32048', '32050' ] ]
+
+   > PsTree.treeKill(32034)
+     'killed 47673 47671 47668 47664 47663 47662 47658'
 ```
